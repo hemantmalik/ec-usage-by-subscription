@@ -1,8 +1,8 @@
-# ec-usage-by-project
-Elastic Cloud Usage by Project Reports
+# ec-usage-by-subscription
+Elastic Cloud Usage by Azure Subscription 
 
 This application delivers an interactive web page that allows you 
-to view your elastic cloud usage, summarized by a project tag.
+to view your elastic cloud usage, summarized by a Azure Subscription tag.
 It also allows users to download the summarized data to a CSV file.
 
 ## Pre-Requisites
