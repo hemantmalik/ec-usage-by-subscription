@@ -50,6 +50,7 @@ const periodInfo = [
           name: deployment.deployment_name,
           state: detail.state,
           tag: detail.tag,
+          tag1: detail.tag1,
           costs: deployment.costs.total,
           rate: deployment.hourly_rate,
         };

@@ -4,7 +4,8 @@
 module.exports = {
   EC_API_KEY: process.env.EC_API_KEY,
   EC_API_URL: process.env.EC_API_URL || 'https://api.elastic-cloud.com',
-  EC_TAG_NAME: process.env.EC_TAG_NAME || 'project',
+  EC_TAG_NAME: process.env.EC_TAG_NAME || 'azure_subscription_name',
+  EC_TAG_NAME_1: process.env.EC_TAG_NAME_1 || 'azure_resource_group',
 
   CLIENT_PATH: process.env.CLIENT_PATH,
 

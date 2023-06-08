@@ -119,7 +119,7 @@ function UsageReport({ onLogout }) {
           </div>
         </Row>
         <Row className="mt-1">
-          <h1>Usage by project</h1>
+          <h1>Usage by Azure Subscriptions</h1>
         </Row>
         <Row className="mt-3">
           <Col>
@@ -170,6 +170,9 @@ function UsageReport({ onLogout }) {
                   <tr>
                     <th scope="col"></th>
                     <th scope="col" className="text-end pe-4">
+                      Azure Resource Group
+                    </th>
+                    <th scope="col" className="text-end pe-4">
                       Rate
                     </th>
                     <th scope="col" className="text-end pe-4">
@@ -180,7 +183,7 @@ function UsageReport({ onLogout }) {
                 {tagOrder.map(tag => (
                   <tbody key={tag}>
                     <tr>
-                      <th colSpan="3">Project: {tag}</th>
+                      <th colSpan="3">Azure Subscription: {tag}</th>
                     </tr>
                     {data.deployments.map(deployment => {
                       if (deployment.tag !== tag) return undefined;
@@ -198,6 +201,9 @@ function UsageReport({ onLogout }) {
                             </div>
                           </td>
                           <td className="text-end">
+                          {deployment.tag1}
+                          </td>
+                          <td className="text-end">
                             ${deployment.rate.toFixed(4)}
                           </td>
                           <td className="text-end">
@@ -207,6 +213,7 @@ function UsageReport({ onLogout }) {
                       );
                     })}
                     <tr className="table-light">
+                      <th></th>
                       <th></th>
                       <th></th>
                       <th className="text-end">${tagTotals[tag].toFixed(2)}</th>
